@@ -48,3 +48,16 @@ def to_status(reading):
     }
 
 print(f"\nThe new dictionary is: {to_status(readings[1])}")  # hall-lamp is index 1
+
+#task 5
+def by_room(readings):
+    rooms = {}
+    for reading in readings:
+        room = reading["room"]
+        if room not in rooms:
+            rooms[room] = []
+        rooms[room].append(reading["name"])
+    print(f"\nThe device(s) under each room is/are: {rooms}")
+    return rooms
+
+by_room(readings)
