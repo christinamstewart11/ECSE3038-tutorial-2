@@ -6,8 +6,21 @@ readings = [
     {"name": "patio",      "room": "outside", "temp": 29.8, "online": True},
 ]
 
+#task 1
 def list_devices(readings):
     for reading in readings:
         print(f"The device is: {reading['name']}, The temp is: {reading['temp']}")
         
 list_devices(readings)
+
+#tak 2
+def average_temp(readings):
+    total = 0
+    for reading in readings:
+        total += reading["temp"]
+    avg_t = total / len(readings)
+    print(f"\nThe average temp is: {avg_t}")
+    return avg_t
+
+average_temp(readings)
+
