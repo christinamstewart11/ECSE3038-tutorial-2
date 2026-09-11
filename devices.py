@@ -34,3 +34,17 @@ def hottest(readings):
     return hottest_device
 
 hottest(readings)
+
+#task 4
+def to_status(reading):
+    if reading["online"]:
+        status = "ok"
+    else:
+        status = "offline"
+    return {
+        "device": reading["name"],
+        "status": status,
+        "celsius": reading["temp"]
+    }
+
+print(f"\nThe new dictionary is: {to_status(readings[1])}")  # hall-lamp is index 1
