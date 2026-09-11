@@ -24,3 +24,13 @@ def average_temp(readings):
 
 average_temp(readings)
 
+#task 3
+def hottest(readings):
+    hottest_device = readings[0]
+    for reading in readings:
+        if reading["temp"] > hottest_device["temp"]:
+            hottest_device = reading
+    print(f"\nThe hottest device is: {hottest_device}")
+    return hottest_device
+
+hottest(readings)
